@@ -16,16 +16,21 @@ class Car:
 
 # дочерний класс, подкласс
 class Bus(Car):
+    # добавление новых атрибутов
     def __init__(self, color, model, number):
+        # обращение к суперклассу для вызова метода из родительского класса
+        # правильный подход - через super()
         super().__init__(color, model)
         self.number = number
 
 
 class Truck(Car):
+    # переопределение метода
     def drive_to(self, destination):
         # super().drive_to(destination)
         print(f"Truck {self.model} driving to {destination}")
 
+    # метод только у класса Truck
     def test(self):
         print(f"Truck test: {self.model}")
 
@@ -45,4 +50,5 @@ print("Bus 42:", bus_42.color, bus_42.model, bus_42.number)
 
 vehicles = [car_honda, truck_1, bus_42]
 for v in vehicles:
+    # возможность обращаться к одному методу у экземпляров разных классов
     v.drive_to(destination="Karakol")
