@@ -69,5 +69,5 @@ print(f"{car_subaru.model} max speed:",
       car_subaru.get_max_speed())
 
 print(car_honda.max_speed)
-car_honda.max_speed = 145
+car_honda.max_speed = 100
 print(car_honda.max_speed)

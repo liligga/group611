@@ -11,6 +11,9 @@ class Animal(ABC):
     def test(self):
         pass
 
+    def test2(self):
+        print("test2")
+
 class Dog(Animal):
     def make_sound(self):
         print("гав гав")
