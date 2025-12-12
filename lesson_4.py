@@ -22,6 +22,8 @@ class Car:
         print(f"{cls.car_total}")
         print(f"Всего {Car.car_total} машин")
         cls.test()
+        Car.validate_speed(100)
+
 
     @staticmethod
     def validate_speed(val):
