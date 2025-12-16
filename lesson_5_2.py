@@ -6,6 +6,11 @@ def printer(func):
         print("после вызова")
     return wrapper
 
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("<UNK> <UNK>")
+        func(*args, **kwargs)
+    return wrapper
 
 @printer
 def hello_world():
